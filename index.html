@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>GitHub Meter</title>
+    <style>
+      /* Prevent FOUC */
+      html { background: transparent; }
+      body { background: transparent; opacity: 0; transition: opacity 0.15s ease; }
+      body.loaded { opacity: 1; }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

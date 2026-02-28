@@ -1,0 +1,76 @@
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  padding: 0 8px 0 12px;
+  background: linear-gradient(180deg, rgba(30, 37, 46, 0.98) 0%, rgba(22, 27, 34, 0.98) 100%);
+  border-bottom: 1px solid var(--border-muted);
+  flex-shrink: 0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grip {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.btnActive {
+  color: var(--accent-blue);
+}
+
+.btnActive:hover {
+  color: var(--accent-blue);
+  background: var(--glow-blue);
+}
+
+.btnClose:hover {
+  background: rgba(248, 81, 73, 0.2);
+  color: var(--accent-red);
+}

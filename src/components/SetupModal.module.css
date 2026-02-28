@@ -1,0 +1,306 @@
+/* ── Overlay ─────────────────────────────────────────────────────────────────*/
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 12px;
+}
+
+/* ── Modal card ──────────────────────────────────────────────────────────────*/
+.modal {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────────*/
+.header {
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid #21262d;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.subtitle {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* ── Step indicator ──────────────────────────────────────────────────────────*/
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #21262d;
+  margin: 0 6px;
+}
+
+.stepDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #21262d;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.stepDotActive {
+  background: #1f6feb;
+  border-color: #388bfd;
+  color: #ffffff;
+}
+
+.stepDotDone {
+  background: #238636;
+  border-color: #2ea043;
+  color: #ffffff;
+}
+
+/* ── Body ────────────────────────────────────────────────────────────────────*/
+.body {
+  padding: 16px 18px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #c9d1d9;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hint {
+  margin: 0;
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.subtle {
+  color: #8b949e;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Plan tiles ──────────────────────────────────────────────────────────────*/
+.planGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.planTile {
+  width: 100%;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.planTile:hover {
+  border-color: #58a6ff;
+  background: #1a2332;
+}
+
+.planTileSelected {
+  border-color: #388bfd;
+  background: #112240;
+}
+
+.planName {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6edf3;
+}
+
+.planReqs {
+  font-size: 11px;
+  font-weight: 600;
+  color: #58a6ff;
+  white-space: nowrap;
+}
+
+.planNote {
+  font-size: 10px;
+  color: #8b949e;
+  white-space: nowrap;
+}
+
+/* ── Budget rows ─────────────────────────────────────────────────────────────*/
+.emptyBudgets {
+  margin: 0;
+  font-size: 11px;
+  color: #8b949e;
+  font-style: italic;
+}
+
+.budgetRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.budgetProduct {
+  flex: 1;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 12px;
+  padding: 5px 6px;
+  min-width: 0;
+}
+
+.budgetProduct:focus {
+  outline: none;
+  border-color: #388bfd;
+}
+
+.budgetDollar {
+  font-size: 12px;
+  color: #8b949e;
+}
+
+.budgetAmount {
+  width: 64px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 12px;
+  padding: 5px 6px;
+  text-align: right;
+}
+
+.budgetAmount:focus {
+  outline: none;
+  border-color: #388bfd;
+}
+
+.budgetPer {
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.budgetRemove {
+  background: none;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  font-size: 14px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: border-color 0.12s, color 0.12s;
+}
+
+.budgetRemove:hover {
+  border-color: #f85149;
+  color: #f85149;
+}
+
+.addBudget {
+  background: none;
+  border: 1px dashed #30363d;
+  border-radius: 6px;
+  color: #58a6ff;
+  font-size: 12px;
+  padding: 7px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.addBudget:hover {
+  border-color: #388bfd;
+  background: #112240;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────────*/
+.footer {
+  padding: 12px 18px 16px;
+  border-top: 1px solid #21262d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnPrimary {
+  background: #1f6feb;
+  border: 1px solid #388bfd;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: #388bfd;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: none;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+  font-size: 13px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.12s;
+}
+
+.btnSecondary:hover {
+  border-color: #8b949e;
+}
